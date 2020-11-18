@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/store-juan-iessi/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/store-juan-iessi/static/js/main.6cf70072.chunk.js",
+    "main.js.map": "/store-juan-iessi/static/js/main.6cf70072.chunk.js.map",
+    "runtime-main.js": "/store-juan-iessi/static/js/runtime-main.6ff6e9e6.js",
+    "runtime-main.js.map": "/store-juan-iessi/static/js/runtime-main.6ff6e9e6.js.map",
+    "static/js/2.5f814f7f.chunk.js": "/store-juan-iessi/static/js/2.5f814f7f.chunk.js",
+    "static/js/2.5f814f7f.chunk.js.map": "/store-juan-iessi/static/js/2.5f814f7f.chunk.js.map",
+    "static/js/3.eebccbdf.chunk.js": "/store-juan-iessi/static/js/3.eebccbdf.chunk.js",
+    "static/js/3.eebccbdf.chunk.js.map": "/store-juan-iessi/static/js/3.eebccbdf.chunk.js.map",
+    "index.html": "/store-juan-iessi/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/store-juan-iessi/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.5f814f7f.chunk.js.LICENSE.txt": "/store-juan-iessi/static/js/2.5f814f7f.chunk.js.LICENSE.txt",
+    "static/media/logo.103b5fa1.svg": "/store-juan-iessi/static/media/logo.103b5fa1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6ff6e9e6.js",
+    "static/js/2.5f814f7f.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.6cf70072.chunk.js"
+  ]
+}
