@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.css": "/store-juan-iessi/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/store-juan-iessi/static/js/main.6cf70072.chunk.js",
-    "main.js.map": "/store-juan-iessi/static/js/main.6cf70072.chunk.js.map",
-    "runtime-main.js": "/store-juan-iessi/static/js/runtime-main.6ff6e9e6.js",
-    "runtime-main.js.map": "/store-juan-iessi/static/js/runtime-main.6ff6e9e6.js.map",
-    "static/js/2.5f814f7f.chunk.js": "/store-juan-iessi/static/js/2.5f814f7f.chunk.js",
-    "static/js/2.5f814f7f.chunk.js.map": "/store-juan-iessi/static/js/2.5f814f7f.chunk.js.map",
-    "static/js/3.eebccbdf.chunk.js": "/store-juan-iessi/static/js/3.eebccbdf.chunk.js",
-    "static/js/3.eebccbdf.chunk.js.map": "/store-juan-iessi/static/js/3.eebccbdf.chunk.js.map",
+    "main.css": "/store-juan-iessi/static/css/main.11a82e4b.chunk.css",
+    "main.js": "/store-juan-iessi/static/js/main.e28b565a.chunk.js",
+    "main.js.map": "/store-juan-iessi/static/js/main.e28b565a.chunk.js.map",
+    "runtime-main.js": "/store-juan-iessi/static/js/runtime-main.0badf7b2.js",
+    "runtime-main.js.map": "/store-juan-iessi/static/js/runtime-main.0badf7b2.js.map",
+    "static/js/2.b97b49e5.chunk.js": "/store-juan-iessi/static/js/2.b97b49e5.chunk.js",
+    "static/js/2.b97b49e5.chunk.js.map": "/store-juan-iessi/static/js/2.b97b49e5.chunk.js.map",
     "index.html": "/store-juan-iessi/index.html",
-    "static/css/main.8c8b27cf.chunk.css.map": "/store-juan-iessi/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.5f814f7f.chunk.js.LICENSE.txt": "/store-juan-iessi/static/js/2.5f814f7f.chunk.js.LICENSE.txt",
-    "static/media/logo.103b5fa1.svg": "/store-juan-iessi/static/media/logo.103b5fa1.svg"
+    "static/css/main.11a82e4b.chunk.css.map": "/store-juan-iessi/static/css/main.11a82e4b.chunk.css.map",
+    "static/js/2.b97b49e5.chunk.js.LICENSE.txt": "/store-juan-iessi/static/js/2.b97b49e5.chunk.js.LICENSE.txt",
+    "static/media/aerolab-logo.0a8fb170.svg": "/store-juan-iessi/static/media/aerolab-logo.0a8fb170.svg",
+    "static/media/arrow-left.e6eb9be1.svg": "/store-juan-iessi/static/media/arrow-left.e6eb9be1.svg",
+    "static/media/arrow-right.3306c112.svg": "/store-juan-iessi/static/media/arrow-right.3306c112.svg",
+    "static/media/buy-blue.c5c4f01c.svg": "/store-juan-iessi/static/media/buy-blue.c5c4f01c.svg",
+    "static/media/coin.b8bc711d.svg": "/store-juan-iessi/static/media/coin.b8bc711d.svg",
+    "static/media/header-x1.b6f067c6.png": "/store-juan-iessi/static/media/header-x1.b6f067c6.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.6ff6e9e6.js",
-    "static/js/2.5f814f7f.chunk.js",
-    "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.6cf70072.chunk.js"
+    "static/js/runtime-main.0badf7b2.js",
+    "static/js/2.b97b49e5.chunk.js",
+    "static/css/main.11a82e4b.chunk.css",
+    "static/js/main.e28b565a.chunk.js"
   ]
 }
