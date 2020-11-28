@@ -16,7 +16,7 @@ function Productos (){
 
     return (
         
-        <div>
+        <div className="products-galery">
             {productos.map(producto => <ProductCard key={producto._id} {...producto}/>)} {/* paso como prop a "productcard" todas las propiedades de "producto" */}
         </div>
     )

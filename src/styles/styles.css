@@ -77,21 +77,36 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1rem 2rem 1rem 2rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-.filter .prod-quant {
-  color: black;
+.filter .botonera {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
-.filter .sort {
+.filter .botonera .prod-quant {
+  color: #616161;
+  font-size: 1.2rem;
+  padding: .7rem;
+}
+
+.filter .botonera .sort {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,12 +115,18 @@
           justify-content: flex-start;
 }
 
-.filter .sort .sort-by {
-  color: gainsboro;
-  border-left: 1px solid black;
+.filter .botonera .sort .sort-by {
+  color: #a3a3a3;
+  border-left: 1px solid #d9d9d9;
+  padding: .7rem;
+  font-size: 1.2rem;
 }
 
-.filter .sort .filter-btn {
+.filter .botonera .sort .filter-btn {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 1.2rem;
   cursor: pointer;
   background-color: #ededed;
   color: #a3a3a3;
@@ -119,7 +140,7 @@
   margin: .2rem .3rem;
 }
 
-.filter .sort .filter-btn:active {
+.filter .botonera .sort .filter-btn:active {
   background-color: #0ad4fa;
   color: #FFFFFF;
 }
@@ -136,5 +157,100 @@
 .filter .move-btn .arrow-btn {
   border: none;
   background-color: transparent;
+  margin: 0 .2rem;
+}
+
+.products-galery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.products-galery .product-card {
+  position: relative;
+  background-color: white;
+  -webkit-box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
+  width: 20%;
+  min-width: 276px;
+  margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.products-galery .product-card:hover .hover-card {
+  display: initial;
+}
+
+.products-galery .product-card .images-ctn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.products-galery .product-card .images-ctn .buy-icon {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 1rem 1rem 0 1rem;
+}
+
+.products-galery .product-card .images-ctn .prod-img {
+  width: 90%;
+}
+
+.products-galery .product-card .images-ctn:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  border-top: 1px solid #d9d9d9;
+}
+
+.products-galery .product-card .text-box {
+  text-align: left;
+  padding: 1rem;
+}
+
+.products-galery .product-card .text-box .prod-category {
+  color: #a3a3a3;
+}
+
+.products-galery .product-card .text-box .prod-name {
+  color: #616161;
+}
+
+.products-galery .hover-card {
+  display: none;
+  position: absolute;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0ad4fa), to(#25bbf1));
+  background-image: linear-gradient(-180deg, #0ad4fa 0%, #25bbf1 100%);
+  width: 100%;
+  height: 100%;
+  min-width: 276px;
+  z-index: 10000000;
+  opacity: 70%;
 }
 /*# sourceMappingURL=styles.css.map */
