@@ -25,6 +25,7 @@
     flex-flow:row wrap;
     justify-content: space-between;
     padding: 1rem;
+    position: relative;
     .user{
         display: flex;
         align-items: center;
@@ -36,12 +37,36 @@
             border-radius: 10px;
             padding: .5rem;
             margin-left: 1rem;
+            cursor: pointer;
             .cant-coin{
                 margin-right: .2rem;
             }
             .icon-coin{
                 width: 1.75rem;
             }
+        }
+    }
+}
+.more-coins{
+position: absolute;
+z-index: 10;
+top: 5rem;
+right: .5rem;
+border-radius: 10px;
+background-color: rgba(255, 255, 255, .9);
+padding: .5rem;
+    .add-coins{
+        display: flex;
+        flex-flow: row wrap;
+        border: none;
+        align-items: center;
+        background-color: gainsboro;
+        border-radius: 10px;
+        padding: .5rem;
+        margin: 1rem 0;
+        .img-coin{
+            margin-left: 0.2rem;
+            width: 1.5rem;
         }
     }
 }

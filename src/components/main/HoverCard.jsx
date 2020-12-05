@@ -1,5 +1,4 @@
-import React, {useContext, useState} from "react";
-import {Context} from "../../context/ContextProvider";
+import React from "react";
 import buyWithe from "../../assets/buy-white.svg";
 import iconCoin from "../../assets/coin.svg";
 import ProductServices from "../../services/ProductServices";

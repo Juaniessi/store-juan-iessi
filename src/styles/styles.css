@@ -37,6 +37,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1rem;
+  position: relative;
 }
 
 .header-bar .user {
@@ -63,6 +64,7 @@
   border-radius: 10px;
   padding: .5rem;
   margin-left: 1rem;
+  cursor: pointer;
 }
 
 .header-bar .user .user-coin .cant-coin {
@@ -71,6 +73,39 @@
 
 .header-bar .user .user-coin .icon-coin {
   width: 1.75rem;
+}
+
+.more-coins {
+  position: absolute;
+  z-index: 10;
+  top: 5rem;
+  right: .5rem;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: .5rem;
+}
+
+.more-coins .add-coins {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  border: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: gainsboro;
+  border-radius: 10px;
+  padding: .5rem;
+  margin: 1rem 0;
+}
+
+.more-coins .add-coins .img-coin {
+  margin-left: 0.2rem;
+  width: 1.5rem;
 }
 
 .filter {
