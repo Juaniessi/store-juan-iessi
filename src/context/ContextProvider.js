@@ -10,9 +10,8 @@ export default function AppProvider({ children }) {
     const [user, setUser]= useState({name:"", points:""});
 
     const getUserData = async () => { //doble async porque si no te llegan promesas por todos lados
-        const usuario = await UserServices.getUser();
-        console.log(usuario);
-        setUser(usuario);
+        const userData = await UserServices.getUser();
+        setUser(userData);
     }
 
     useEffect(() => getUserData(),[]); //usamos el useEffect para hacer que la funcion se ejecute 1 sola vez, a su vez, a get user data lo llamamos como arrow, para que REACT no se queje.

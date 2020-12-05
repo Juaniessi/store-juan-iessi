@@ -4,9 +4,9 @@ import UserServices from "../../services/UserServices";
 
 function AddCoins (){
 
-    const addMoreCoins = async (cantCoins) => {
-       await UserServices.postCoins(cantCoins);
-       alert(`Agregaste ${cantCoins}`)
+    const addMoreCoins = async (amountCoins) => {
+       await UserServices.postCoins(amountCoins);
+       alert(`Agregaste ${amountCoins}`)
     }
 
     return (
