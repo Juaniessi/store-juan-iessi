@@ -2,6 +2,7 @@ import React, {useContext, useState} from "react";
 import {Context} from "../../context/ContextProvider";
 import buyWithe from "../../assets/buy-white.svg";
 import iconCoin from "../../assets/coin.svg";
+import ProductServices from "../../services/ProductServices";
 
 function HoverCard (props){
 
@@ -10,16 +11,19 @@ function HoverCard (props){
         _id
     } = props;
 
-    const {user} = useContext(Context) 
+    const redeemProduct = () => {
+        ProductServices.postRedeem(_id);
+        alert("¡bien! (no mentira)");
+    }
 
     return (
         <div className="hover-card">
-            <img src={buyWithe} alt="comprar"/>
+            <img className="buy-bag" src={buyWithe} alt="comprar"/>
             <div className="cost">
                 <span className="cant-coin">{cost}</span>
-                <img className="" src={iconCoin} alt="coin"/>
+                <img className="coin" src={iconCoin} alt="coin"/>
             </div>
-            <button className="redeem-btn">Redeem now</button>
+            <button className="redeem-btn" onClick={redeemProduct}>Redeem now</button>
         </div>
     )
 };
