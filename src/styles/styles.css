@@ -227,6 +227,36 @@
   width: 2rem;
 }
 
+.products-galery .product-card .images-ctn .cant-buy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100px;
+  background-color: #616161ab;
+  padding: .3rem 0 0 .3rem;
+  min-height: 42px;
+}
+
+.products-galery .product-card .images-ctn .cant-buy .missing-coins {
+  margin: 0 .2rem .35rem 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+}
+
 .products-galery .product-card .images-ctn .prod-img {
   width: 90%;
 }
