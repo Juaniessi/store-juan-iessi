@@ -36,7 +36,7 @@ class ProductServices {
         }
 
         const parameters = { //parametros requeridos para hacer el post
-            body: {productId}, //productId es para decirle al end point cuantas monedas debe agregar
+            body: {productId}, //productId es para decirle al end point que producto quiero
             method: "post",
             mode: "cors",
             headers

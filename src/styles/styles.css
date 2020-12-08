@@ -152,6 +152,14 @@
           align-items: flex-start;
 }
 
+.filter:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  border-top: 1px solid #d9d9d9;
+}
+
 .filter .buttons-board {
   display: -webkit-box;
   display: -ms-flexbox;
