@@ -63,7 +63,7 @@
   background-color: gainsboro;
   border-radius: 10px;
   padding: .5rem;
-  margin-left: 1rem;
+  margin-left: .5rem;
   cursor: pointer;
 }
 
@@ -73,6 +73,28 @@
 
 .header-bar .user .user-coin .icon-coin {
   width: 1.75rem;
+}
+
+.header-bar .header-button {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: #ededed;
+  color: #a3a3a3;
+  border: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 100px;
+  padding: 10px 12.5px;
+  margin: 0 .5rem;
+}
+
+.header-bar .header-button:hover {
+  background-color: #0ad4fa;
+  color: #FFFFFF;
 }
 
 .more-coins {
@@ -101,6 +123,11 @@
   border-radius: 10px;
   padding: .5rem;
   margin: 1rem 0;
+}
+
+.more-coins .add-coins:hover {
+  -webkit-transform: translate(-1px, -2px);
+          transform: translate(-1px, -2px);
 }
 
 .more-coins .add-coins .img-coin {
@@ -172,7 +199,6 @@
   border-radius: 100px;
   padding: 10px;
   margin: 0 .2rem .2rem 0;
-  margin: .2rem .3rem;
 }
 
 .filter .buttons-board .sort .sort-controls-ctn .active {

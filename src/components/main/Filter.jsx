@@ -21,7 +21,6 @@ function Filter ({products, setProducts, hidden}){
                 <div className={`sort ${hidden ? "hidden":"" }`}>
                     <span className="sort-by">Sort by:</span>
                     <p className="sort-controls-ctn">
-                        Ordenar por: 
                         {params.map(({callback, wording}, i)=> <button key={i} className={`filter-btn ${activeFilter===i ? 'active':''}`} onClick={()=>sortProducts(i,callback)}>{wording}</button>)} {/* i es el segundo parametro del map y trae le subindice del array. En Sort products llamo a i buttonNumber*/}
                     </p>
                 </div>
