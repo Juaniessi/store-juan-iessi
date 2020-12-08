@@ -7,6 +7,8 @@ export const Context = React.createContext();
 
 export default function AppProvider({ children }) {
 
+    const [products, setProducts]= useState([]);
+
     const [user, setUser]= useState({name:"", points:""});
 
     const getUserData = async () => { //doble async porque si no te llegan promesas por todos lados
@@ -17,7 +19,7 @@ export default function AppProvider({ children }) {
     useEffect(() => getUserData(),[]); //usamos el useEffect para hacer que la funcion se ejecute 1 sola vez, a su vez, a get user data lo llamamos como arrow, para que REACT no se queje.
 
   return (
-    <Context.Provider value={{ user }}>
+    <Context.Provider value={{ user, products, setProducts }}>
       {children}
     </Context.Provider>
   );

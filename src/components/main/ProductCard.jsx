@@ -10,7 +10,6 @@ const { _id, category, cost, img, name } = props;
 
 const {user:{points}} = useContext(Context);
 
-
   return(
     
     <div className="product-card">
