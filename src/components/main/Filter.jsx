@@ -4,7 +4,7 @@ import leftArrow from "../../assets/arrow-left.svg";
 import {params} from "../../services/const";
 
 
-function Filter ({products, setProducts}){
+function Filter ({products, setProducts, hidden}){
 
     const [activeFilter, setActiveFilter] = useState(0);
 
@@ -18,7 +18,7 @@ function Filter ({products, setProducts}){
         <div className="filter">
             <div className="buttons-board">
                 <span className="prod-quant">16 of 32 products</span>
-                <div className="sort">
+                <div className={`sort ${hidden ? "hidden":"" }`}>
                     <span className="sort-by">Sort by:</span>
                     <p className="sort-controls-ctn">
                         Ordenar por: 

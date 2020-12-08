@@ -180,6 +180,10 @@
   color: #FFFFFF;
 }
 
+.filter .buttons-board .hidden {
+  display: none;
+}
+
 .filter .move-btn {
   display: -webkit-box;
   display: -ms-flexbox;

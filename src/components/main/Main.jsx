@@ -17,8 +17,9 @@ function Main (){
 
     return (
         <div>
-            <Filter products = {products} setProducts = {setProducts} /> {/* paso por props la funcion al componenete filtro */}
+            <Filter products = {products} setProducts = {setProducts} hidden = {false}/> {/* paso por props la funcion al componenete filtro */}
             <ProductsGalery products={products}/> {/* le paso una prop que son todos los productos */}
+            <Filter products = {products} setProducts = {setProducts} hidden = {true}/>
         </div>
     )
 };
