@@ -77,7 +77,7 @@ padding: .5rem;
     justify-content: space-between;
     margin: 1rem 2rem 1rem 2rem;
     align-items: flex-start;
-    .botonera{
+    .buttons-board{
         display: flex;
         flex-flow: row wrap;
         .prod-quant{
@@ -94,19 +94,21 @@ padding: .5rem;
                 padding: .7rem;
                 font-size: 1.2rem;
             }
-            .filter-btn{
-                justify-content: flex-end;
-                font-size: 1.2rem;
-                cursor: pointer;
-                background-color: #ededed;
-                color: #a3a3a3;
-                border: none;
-                width: max-content;
-                border-radius: 100px;
-                padding: 10px;
-                margin: 0 .2rem .2rem 0;
-                margin: .2rem .3rem;
-                &:active{
+            .sort-controls-ctn{
+                .filter-btn{
+                    justify-content: flex-end;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                    background-color: #ededed;
+                    color: #a3a3a3;
+                    border: none;
+                    width: max-content;
+                    border-radius: 100px;
+                    padding: 10px;
+                    margin: 0 .2rem .2rem 0;
+                    margin: .2rem .3rem;
+                }
+                .active{
                     background-color: #0ad4fa;
                     color: #FFFFFF;
                 }

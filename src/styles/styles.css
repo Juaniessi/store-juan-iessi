@@ -125,7 +125,7 @@
           align-items: flex-start;
 }
 
-.filter .botonera {
+.filter .buttons-board {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -135,13 +135,13 @@
           flex-flow: row wrap;
 }
 
-.filter .botonera .prod-quant {
+.filter .buttons-board .prod-quant {
   color: #616161;
   font-size: 1.2rem;
   padding: .7rem;
 }
 
-.filter .botonera .sort {
+.filter .buttons-board .sort {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -150,14 +150,14 @@
           justify-content: flex-start;
 }
 
-.filter .botonera .sort .sort-by {
+.filter .buttons-board .sort .sort-by {
   color: #a3a3a3;
   border-left: 1px solid #d9d9d9;
   padding: .7rem;
   font-size: 1.2rem;
 }
 
-.filter .botonera .sort .filter-btn {
+.filter .buttons-board .sort .sort-controls-ctn .filter-btn {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -175,7 +175,7 @@
   margin: .2rem .3rem;
 }
 
-.filter .botonera .sort .filter-btn:active {
+.filter .buttons-board .sort .sort-controls-ctn .active {
   background-color: #0ad4fa;
   color: #FFFFFF;
 }

@@ -7,11 +7,6 @@ function Main (){
 
     const [products, setProducts]= useState([]);
 
-    const sortProducts = (sortFunction) => {
-        const sortedProducts = products.slice().sort(sortFunction); //el slice lo que hace es "clonar" el el array antes de ordenarlo con el sort
-        setProducts(sortedProducts);
-    }
-
     const getProducts = async () => { //doble async porque si no te llegan promesas por todos lados
         const productsArray = await ProductServices.getProducts(); //el static que pusimos antes hace que esto funcione
         
@@ -22,7 +17,7 @@ function Main (){
 
     return (
         <div>
-            <Filter sortProducts={sortProducts}/> {/* paso por props la funcion al componenete filtro */}
+            <Filter products = {products} setProducts = {setProducts} /> {/* paso por props la funcion al componenete filtro */}
             <ProductsGalery products={products}/> {/* le paso una prop que son todos los productos */}
         </div>
     )
