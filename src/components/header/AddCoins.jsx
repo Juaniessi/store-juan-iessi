@@ -6,6 +6,7 @@ function AddCoins (){
 
     const addMoreCoins = async (amountCoins) => {
        await UserServices.postCoins(amountCoins);
+       await UserServices.getUser();
        alert(`Agregaste ${amountCoins}`)
     }
 

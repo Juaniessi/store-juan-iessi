@@ -6,6 +6,9 @@ class ProductServices {
         }
         try{
             let response = await fetch("https://coding-challenge-api.aerolab.co/products", {headers} ) //el segundo parametro del fetch sirve para pedirle que tenga en cuenta otras cosas
+            if (response.status !== 200) {
+                throw new Error("Ups, something went wrong!")
+            }
             response = await response.json();
             return response;
         }
@@ -21,6 +24,9 @@ class ProductServices {
         }
         try{
             let response = await fetch("https://coding-challenge-api.aerolab.co/user/history", {headers} ) //el segundo parametro del fetch sirve para pedirle que tenga en cuenta otras cosas
+            if (response.status !== 200) {
+                throw new Error("Ups, something went wrong!")
+            }
             response = await response.json();
             return response;
         }
@@ -44,6 +50,9 @@ class ProductServices {
 
         try{
             let response = await fetch("https://private-anon-20e65f592c-aerolabchallenge.apiary-mock.com/redeem", parameters ) //el segundo parametro del fetch sirve para pedirle que tenga en cuenta otras cosas
+            if (response.status !== 200) {
+                throw new Error("Ups, something went wrong!")
+            }
             response = await response.json();
             return response;
         }

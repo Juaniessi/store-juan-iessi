@@ -7,6 +7,9 @@ class UserServices {
 
         try{
             let response = await fetch("https://coding-challenge-api.aerolab.co/user/me", {headers} ) //el segundo parametro del fetch sirve para pedirle que tenga en cuenta otras cosas
+            if (response.status !== 200) {
+                throw new Error("Ups, something went wrong!")
+            }
             response = await response.json();
             return response;
         }
@@ -31,6 +34,9 @@ class UserServices {
 
         try{
             let response = await fetch("https://private-anon-0211b9ef35-aerolabchallenge.apiary-mock.com/user/points", parameters ) //el segundo parametro del fetch sirve para pedirle que tenga en cuenta otras cosas
+            if (response.status !== 200) {
+                throw new Error("Ups, something went wrong!")
+            }
             response = await response.json();
             return response;
         }
