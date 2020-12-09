@@ -1,12 +1,16 @@
-import React from "react";
+import React, {useContext} from "react";
 import coinIcon from "../../assets/coin.svg";
 import UserServices from "../../services/UserServices";
+import {Context} from "../../context/ContextProvider";
 
 function AddCoins (){
 
+    const {setUser} = useContext(Context);
+
     const addMoreCoins = async (amountCoins) => {
        await UserServices.postCoins(amountCoins);
-       await UserServices.getUser();
+       const updatedUser = await UserServices.getUser(); //me traigo el usuario, lo asigno a uan variable y luego lo seteo
+       setUser(updatedUser); 
        alert(`Agregaste ${amountCoins}`)
     }
 
