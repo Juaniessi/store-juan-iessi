@@ -8,10 +8,10 @@ function AddCoins (){
     const {setUser} = useContext(Context);
 
     const addMoreCoins = async (amountCoins) => {
-       await UserServices.postCoins(amountCoins);
+       const response = await UserServices.postCoins(amountCoins);
        const updatedUser = await UserServices.getUser(); //me traigo el usuario, lo asigno a uan variable y luego lo seteo
        setUser(updatedUser); 
-       alert(`Agregaste ${amountCoins}`)
+       alert(`Added ${amountCoins} coins. You now have ${response["new Points"]} coins.`);
     }
 
     return (
