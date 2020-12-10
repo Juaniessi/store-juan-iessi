@@ -5,6 +5,7 @@ import {Context} from "../../context/ContextProvider";
 import logo from "../../assets/aerolab-logo.svg";
 import coinIcon from "../../assets/coin.svg";
 import AddCoins from "./AddCoins";
+import UserServices from "../../services/UserServices";
 //importo font awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
@@ -14,11 +15,20 @@ import {
 
 function HeaderBar (){
 
-    const {user:{name, points, redeemHistory}, products, setProducts} = useContext(Context); /* redeemHistory es una propiedad el usuario */
+    const {user:{name, points}, products, setProducts} = useContext(Context); /* redeemHistory es una propiedad el usuario */
 
     const [flag, setFlag] = useState(false);
     const [showHistory, setHistoryFlag] = useState(false);
     const [auxProducts, setAuxProducts] = useState([]);
+
+    const redeemHistoryFunction = async () =>{
+        const redeemHistoryFromFetch = await UserServices.getHistory();
+        if(products !== redeemHistoryFromFetch){
+            setAuxProducts(products);
+        }
+
+        setProducts((showHistory ? redeemHistoryFromFetch : auxProducts));
+    }
 
     const handleFlag = () => { /* uso esto para mostar o no la compra de monedas */
         setFlag (!flag);
@@ -29,14 +39,7 @@ function HeaderBar (){
     };
 
 
-    useEffect(() => {
-
-        if(products !== redeemHistory){
-            setAuxProducts(products);
-        }
-
-        setProducts((showHistory ? redeemHistory : auxProducts));
-    },[showHistory])
+    useEffect(() => {redeemHistoryFunction();},[showHistory]);
 
     return (
         <div>
