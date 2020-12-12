@@ -15,7 +15,7 @@ const {user:{points}, onHistory} = useContext(Context);
     <div className="product-card">
       {cost < points && !onHistory && <HoverCard cost={cost} id={_id}/>}
       <div className="images-ctn">
-        {points > cost ?
+        {(points > cost || onHistory) ?
           <img src={buyIcon} alt="buy-icon" className="buy-icon"/> :
           <div className="buy-icon cant-buy">
             <h3 className="missing-coins">{`You need ${cost-points}`}</h3>
