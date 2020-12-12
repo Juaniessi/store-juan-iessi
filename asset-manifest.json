@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/store-juan-iessi/static/css/main.0cdfe335.chunk.css",
-    "main.js": "/store-juan-iessi/static/js/main.ba7e2539.chunk.js",
-    "main.js.map": "/store-juan-iessi/static/js/main.ba7e2539.chunk.js.map",
+    "main.js": "/store-juan-iessi/static/js/main.7e61f5f0.chunk.js",
+    "main.js.map": "/store-juan-iessi/static/js/main.7e61f5f0.chunk.js.map",
     "runtime-main.js": "/store-juan-iessi/static/js/runtime-main.0badf7b2.js",
     "runtime-main.js.map": "/store-juan-iessi/static/js/runtime-main.0badf7b2.js.map",
     "static/js/2.788fa6a6.chunk.js": "/store-juan-iessi/static/js/2.788fa6a6.chunk.js",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.0badf7b2.js",
     "static/js/2.788fa6a6.chunk.js",
     "static/css/main.0cdfe335.chunk.css",
-    "static/js/main.ba7e2539.chunk.js"
+    "static/js/main.7e61f5f0.chunk.js"
   ]
 }
