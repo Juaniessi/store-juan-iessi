@@ -38,7 +38,7 @@ function HeaderBar (){
         setHistoryFlag(!showHistory);
     };
 
-    useEffect(() => {    //el if me permite asegurarme de que por más que haya una variación del showHistory no me lo actualice antes del getProducts
+    useEffect(() => {    //el "if" me permite asegurarme de que por más que haya una variación del showHistory no me lo actualice antes del getProducts
         if (showHistory != null){
             redeemHistoryFunction();
         }

@@ -29,7 +29,6 @@ class ProductServices {
             mode: "cors",
             headers
         }
-            console.log(productId);
         try{
             let response = await fetch("https://coding-challenge-api.aerolab.co/redeem", parameters ) //el segundo parametro del fetch sirve para pedirle que tenga en cuenta otras cosas
             if (response.status !== 200) {
