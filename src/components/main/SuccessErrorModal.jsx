@@ -2,22 +2,30 @@ import React, {useContext} from "react";
 import {Context} from "../../context/ContextProvider";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
-    faSmileBeam,
-    faFrownOpen
+    faThumbsUp,
+    faThumbsDown
 } from '@fortawesome/free-solid-svg-icons';
 
-function SuccessErrorModal({success}) {
+function SuccessErrorModal() {
 
     const {redeemState, setRedeemState} = useContext(Context);
 
     return(
         redeemState !== null ? (
-        <div className="success-container">
-            <FontAwesomeIcon icon={ success ? faSmileBeam : faFrownOpen} />
-            <h3>Success!!</h3>
-            <button onClick={ () => setRedeemState(null)}>OK</button>
-        </div>)
-    : null
+            <div className="full-container">
+                <div className={`message-container ${redeemState ? "success-background" : "error-background"}`}>
+                    <FontAwesomeIcon icon={ redeemState ? faThumbsUp : faThumbsDown} className="icon-message" />
+                    <h3 className="message">{ redeemState ? "success!" : "error!"}</h3>
+                    <span className="large-message">
+                        { redeemState ? "thanks for your redeem, everything went wonderfully." : "oh no, something went wrong."}
+                    </span>
+                    <button onClick={() => setRedeemState(null)} className="close-button">
+                        { redeemState ? "great!" : "try again"}
+                    </button>
+                    <button onClick={() => setRedeemState(!redeemState)} className="close-button switch-button">Switch mesagge</button>
+                </div>
+            </div>)
+        : null
     )
 }
 
