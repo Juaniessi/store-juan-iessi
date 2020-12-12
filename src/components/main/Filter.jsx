@@ -3,8 +3,7 @@ import rightArrow from "../../assets/arrow-right.svg";
 import leftArrow from "../../assets/arrow-left.svg";
 import {params} from "../../services/const";
 
-
-function Filter ({products, setProducts, hidden}){
+function Filter ({products, setProducts, hidden, prevPage, nextPage, maxProdQuant, shownProducts }){
 
     const [activeFilter, setActiveFilter] = useState(0);
 
@@ -17,7 +16,7 @@ function Filter ({products, setProducts, hidden}){
     return (
         <div className="filter">
             <div className="buttons-board">
-                <span className="prod-quant">16 of 32 products</span>
+                <span className="prod-quant">{`${shownProducts} of ${maxProdQuant} products`}</span>
                 <div className={`sort ${hidden ? "hidden":"" }`}>
                     <span className="sort-by">Sort by:</span>
                     <p className="sort-controls-ctn">
@@ -26,8 +25,8 @@ function Filter ({products, setProducts, hidden}){
                 </div>
             </div>
             <div className="move-btn">
-                <button className="arrow-btn"><img src={leftArrow} alt="Flecha izquierda"/></button>
-                <button className="arrow-btn"><img src={rightArrow} alt="Flecha derecha"/></button>
+                <button className="arrow-btn" onClick = {prevPage}><img src={leftArrow} alt="Flecha izquierda"/></button>
+                <button className="arrow-btn" onClick = {nextPage}><img src={rightArrow} alt="Flecha derecha"/></button>
             </div>     
         </div>
     )

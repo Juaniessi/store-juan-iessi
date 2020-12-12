@@ -20,8 +20,10 @@ export default function AppProvider({ children }) {
 
     useEffect(() => getUserData(),[]); //usamos el useEffect para hacer que la funcion se ejecute 1 sola vez, a su vez, a get user data lo llamamos como arrow, para que REACT no se queje.
 
+    const onHistory = products.toString() === user.redeemHistory.toString(); //uso este booleano para saber en que galeria estoy parado
+
   return (
-    <Context.Provider value={{ user, products, setUser, setProducts, redeemState, setRedeemState}}>
+    <Context.Provider value={{ user, products, setUser, setProducts, redeemState, setRedeemState, onHistory}}>
       {children}
     </Context.Provider>
   );

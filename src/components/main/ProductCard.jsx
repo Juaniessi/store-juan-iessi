@@ -8,12 +8,12 @@ function ProductCard(props) {
 
 const { _id, category, cost, img, name } = props;
 
-const {user:{points}} = useContext(Context);
+const {user:{points}, onHistory} = useContext(Context);
 
   return(
     
     <div className="product-card">
-      {cost < points && <HoverCard cost={cost} id={_id}/>}
+      {cost < points && !onHistory && <HoverCard cost={cost} id={_id}/>}
       <div className="images-ctn">
         {points > cost ?
           <img src={buyIcon} alt="buy-icon" className="buy-icon"/> :
