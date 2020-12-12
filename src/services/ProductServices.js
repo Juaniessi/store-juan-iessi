@@ -13,7 +13,7 @@ class ProductServices {
             return response;
         }
         catch(error){
-            console.log(error)
+            return false;
         };
     }
 
@@ -24,14 +24,14 @@ class ProductServices {
         }
 
         const parameters = { //parametros requeridos para hacer el post
-            body: {productId}, //productId es para decirle al end point que producto quiero
+            body: JSON.stringify({productId}), //productId es para decirle al end point que producto quiero
             method: "post",
             mode: "cors",
             headers
         }
-
+            console.log(productId);
         try{
-            let response = await fetch("https://private-anon-20e65f592c-aerolabchallenge.apiary-mock.com/redeem", parameters ) //el segundo parametro del fetch sirve para pedirle que tenga en cuenta otras cosas
+            let response = await fetch("https://coding-challenge-api.aerolab.co/redeem", parameters ) //el segundo parametro del fetch sirve para pedirle que tenga en cuenta otras cosas
             if (response.status !== 200) {
                 throw new Error("Ups, something went wrong!")
             }
@@ -40,7 +40,7 @@ class ProductServices {
         }
 
         catch(error){
-            console.log(error)
+            return false;
         };
     }
 

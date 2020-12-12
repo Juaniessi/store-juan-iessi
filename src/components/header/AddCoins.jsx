@@ -11,7 +11,7 @@ function AddCoins (){
        const response = await UserServices.postCoins(amountCoins);
        const updatedUser = await UserServices.getUser(); //me traigo el usuario, lo asigno a uan variable y luego lo seteo
        setUser(updatedUser); 
-       alert(`Added ${amountCoins} coins. You now have ${response["new Points"]} coins.`);
+       alert(`Added ${amountCoins} coins.`);
     }
 
     return (

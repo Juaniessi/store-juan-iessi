@@ -15,7 +15,7 @@ class UserServices {
         }
 
         catch(error){
-            console.log(error)
+            return false;
         };
     }
 
@@ -25,7 +25,7 @@ class UserServices {
             Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmNiYWQ2YjI2ZjdkMjAwMjA0MTE0YzUiLCJpYXQiOjE2MDcxODM3MjN9.BjtQYRlkAcjscJVLE08Zq57DgNBGP-t-Vekvw25Ffz0" 
         }
         try{
-            let response = await fetch("https://private-anon-b9d4f7b83d-aerolabchallenge.apiary-mock.com/user/history", {headers} ) //el segundo parametro del fetch sirve para pedirle que tenga en cuenta otras cosas
+            let response = await fetch("https://coding-challenge-api.aerolab.co/user/history", {headers} ) //el segundo parametro del fetch sirve para pedirle que tenga en cuenta otras cosas
             if (response.status !== 200) {
                 throw new Error("Ups, something went wrong!")
             }
@@ -33,7 +33,7 @@ class UserServices {
             return response;
         }
         catch(error){
-            console.log(error)
+            return false;
         };
     }
 
@@ -44,14 +44,14 @@ class UserServices {
         }
 
         const parameters = { //parametros requeridos para hacer el post
-            body: {amount: amountCoins}, //amountCoins es para decirle al end point cuantas monedas debe agregar
+            body: JSON.stringify({amount: amountCoins}), //amountCoins es para decirle al end point cuantas monedas debe agregar
             method: "post",
             mode: "cors",
             headers
         }
 
         try{
-            let response = await fetch("https://private-anon-0211b9ef35-aerolabchallenge.apiary-mock.com/user/points", parameters ) //el segundo parametro del fetch sirve para pedirle que tenga en cuenta otras cosas
+            let response = await fetch("https://coding-challenge-api.aerolab.co/user/points", parameters ) //el segundo parametro del fetch sirve para pedirle que tenga en cuenta otras cosas
             if (response.status !== 200) {
                 throw new Error("Ups, something went wrong!")
             }
@@ -60,7 +60,7 @@ class UserServices {
         }
 
         catch(error){
-            console.log(error)
+            return false;
         };
     }
 }

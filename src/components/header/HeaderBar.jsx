@@ -18,7 +18,7 @@ function HeaderBar (){
     const {user:{name, points}, products, setProducts} = useContext(Context); /* redeemHistory es una propiedad el usuario */
 
     const [flag, setFlag] = useState(false);
-    const [showHistory, setHistoryFlag] = useState(false);
+    const [showHistory, setHistoryFlag] = useState(null);
     const [auxProducts, setAuxProducts] = useState([]);
 
     const redeemHistoryFunction = async () =>{
@@ -38,8 +38,11 @@ function HeaderBar (){
         setHistoryFlag(!showHistory);
     };
 
-
-    useEffect(() => {redeemHistoryFunction();},[showHistory]);
+    useEffect(() => {    //el if me permite asegurarme de que por más que haya una variación del showHistory no me lo actualice antes del getProducts
+        if (showHistory != null){
+            redeemHistoryFunction();
+        }
+    },[showHistory]);
 
     return (
         <div>

@@ -10,12 +10,12 @@ function HoverCard (props){
     const {setUser} = useContext(Context); 
 
     const {
-        cost,
-        _id
+        cost, 
+        id //desde productCard le paso la pro id (sin el _)
     } = props;
 
     const redeemProduct = async () => {
-        await ProductServices.postRedeem(_id);
+        await ProductServices.postRedeem(id);
         const updatedUser = await UserServices.getUser();
         setUser(updatedUser);
         alert("¡bien! (no mentira)"); //HACER EL MODAL
