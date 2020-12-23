@@ -4,7 +4,7 @@ function usePagination(data, itemsPerPage) {
   const [currentPage, setCurrentPage] = useState(1);
   const maxPage = Math.ceil(data.length / itemsPerPage);
   const maxProdQuant = data.length;
-  const shownProducts = currentPage * itemsPerPage;
+  const shownProducts = Math.min(currentPage*itemsPerPage, maxProdQuant);
 
 
 function currentItems() {
