@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/store-juan-iessi/static/css/main.a10ff41f.chunk.css",
+    "main.css": "/store-juan-iessi/static/css/main.97f2cf11.chunk.css",
     "main.js": "/store-juan-iessi/static/js/main.8b19826c.chunk.js",
     "main.js.map": "/store-juan-iessi/static/js/main.8b19826c.chunk.js.map",
     "runtime-main.js": "/store-juan-iessi/static/js/runtime-main.0badf7b2.js",
@@ -8,7 +8,7 @@
     "static/js/2.f29b6040.chunk.js": "/store-juan-iessi/static/js/2.f29b6040.chunk.js",
     "static/js/2.f29b6040.chunk.js.map": "/store-juan-iessi/static/js/2.f29b6040.chunk.js.map",
     "index.html": "/store-juan-iessi/index.html",
-    "static/css/main.a10ff41f.chunk.css.map": "/store-juan-iessi/static/css/main.a10ff41f.chunk.css.map",
+    "static/css/main.97f2cf11.chunk.css.map": "/store-juan-iessi/static/css/main.97f2cf11.chunk.css.map",
     "static/js/2.f29b6040.chunk.js.LICENSE.txt": "/store-juan-iessi/static/js/2.f29b6040.chunk.js.LICENSE.txt",
     "static/media/aerolab-logo.0a8fb170.svg": "/store-juan-iessi/static/media/aerolab-logo.0a8fb170.svg",
     "static/media/arrow-left.e6eb9be1.svg": "/store-juan-iessi/static/media/arrow-left.e6eb9be1.svg",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.0badf7b2.js",
     "static/js/2.f29b6040.chunk.js",
-    "static/css/main.a10ff41f.chunk.css",
+    "static/css/main.97f2cf11.chunk.css",
     "static/js/main.8b19826c.chunk.js"
   ]
 }
