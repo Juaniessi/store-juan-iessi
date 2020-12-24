@@ -17,7 +17,7 @@ function NavBar (){
 
     const {user:{name, points}, products, setProducts} = useContext(Context); /* redeemHistory es una propiedad el usuario */
 
-    const [flag, setFlag] = useState(false);
+    const [flag, setFlag] = useState(false); /* uso esto para mostar o no el modal de compra de monedas */
     const [showHistory, setHistoryFlag] = useState(null);
     const [auxProducts, setAuxProducts] = useState([]);
 
@@ -30,7 +30,7 @@ function NavBar (){
         setProducts((showHistory ? redeemHistoryFromFetch : auxProducts));
     }
 
-    const handleFlag = () => { /* uso esto para mostar o no la compra de monedas */
+    const handleFlag = () => { /* uso esto para mostar o no el modal de compra de monedas */
         setFlag (!flag);
     };
 
@@ -50,7 +50,7 @@ function NavBar (){
                <img src={logo} alt="Barrilete de aerolab"/>
                <div className="user">
                 <h3>{name}</h3>
-                <button className="header-button" onClick={handleHistory} title={`see ${name} history`}>{showHistory === false ? <FontAwesomeIcon icon={faHistory} /> : <FontAwesomeIcon icon={faHome} /> }</button>                
+                <button className="header-button" onClick={handleHistory} title={`see ${name} history`}>{!showHistory ? <FontAwesomeIcon icon={faHistory} /> : <FontAwesomeIcon icon={faHome} /> }</button>                
                     <div className="user-coin" title="Add more coins" onClick={handleFlag}>
                         <span className="cant-coin">
                             {points}
@@ -59,7 +59,7 @@ function NavBar (){
                     </div>
                </div>
             </div>
-        {flag === false ? "" : <AddCoins/>}
+        {flag && <AddCoins/>/* si flag es verdadero, renderiza */} 
         </nav>
     )
 };

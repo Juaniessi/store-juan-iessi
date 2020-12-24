@@ -1,6 +1,6 @@
 import React, {useContext}  from "react";
 import {Context} from "../../context/ContextProvider";
-import headerElectronics from "../../assets/header-x1.png"
+import headerElectronics from "../../assets/header-x1.png";
 
 function HeaderImg (){
 
