@@ -144,10 +144,18 @@ padding: .5rem;
     .move-btn{
         display: flex;
         justify-content: flex-end;
+        height: 48px;
+        margin-bottom: 0.4rem;
         .arrow-btn{
             border: none;
             background-color: transparent;
             margin: 0 .2rem;
+            cursor: pointer;
+            &:hover{
+                border-radius: 50%;
+                box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.10);
+                background-color: white;
+            }
         }
     }
 }

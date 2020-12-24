@@ -225,12 +225,22 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  height: 48px;
+  margin-bottom: 0.4rem;
 }
 
 .filter .move-btn .arrow-btn {
   border: none;
   background-color: transparent;
   margin: 0 .2rem;
+  cursor: pointer;
+}
+
+.filter .move-btn .arrow-btn:hover {
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
 }
 
 .products-galery {
@@ -544,10 +554,5 @@
 
 .full-container .message-container .close-button:hover {
   opacity: .9;
-}
-
-.full-container .message-container .switch-button {
-  margin-top: .2rem;
-  font-size: .6rem;
 }
 /*# sourceMappingURL=styles.css.map */
