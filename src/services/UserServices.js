@@ -63,7 +63,7 @@ class UserServices {
                 throw new Error("Ups, something went wrong!")
             }
             response = await response.json();
-            return response;
+            return true; //no necesito retornar la "response", no la estoy usando
         }
 
         catch(error){

@@ -360,4 +360,34 @@ padding: .5rem;
         }
     }
 }
-
+.alert{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .add-coins-notification {
+        position: fixed;
+        align-self: center;
+        top: 0.5rem;
+        width: 90%;
+        max-width: 700px;
+        background-color: #008eec;
+        color: white;
+        border-radius: 0.5rem;
+        padding: 1rem 0.7rem;
+        .status-icon {
+            display: inline-block;
+            margin-right: 0.7rem;
+            }
+        .message {
+            display: inline-block;
+            font-weight: 400;
+            margin: 0;
+        }
+        &.success {
+            background-color: #6ed845;
+        }
+        &.error {
+            background-color: rgb(255, 27, 58);
+        }
+    }
+}

@@ -556,4 +556,47 @@
 .full-container .message-container .close-button:hover {
   opacity: .9;
 }
+
+.alert {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.alert .add-coins-notification {
+  position: fixed;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  top: 0.5rem;
+  width: 90%;
+  max-width: 700px;
+  background-color: #008eec;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 1rem 0.7rem;
+}
+
+.alert .add-coins-notification .status-icon {
+  display: inline-block;
+  margin-right: 0.7rem;
+}
+
+.alert .add-coins-notification .message {
+  display: inline-block;
+  font-weight: 400;
+  margin: 0;
+}
+
+.alert .add-coins-notification.success {
+  background-color: #6ed845;
+}
+
+.alert .add-coins-notification.error {
+  background-color: #ff1b3a;
+}
 /*# sourceMappingURL=styles.css.map */
