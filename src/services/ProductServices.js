@@ -4,8 +4,11 @@ class ProductServices {
             "Content-Type": "application/json",
             Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmNiYWQ2YjI2ZjdkMjAwMjA0MTE0YzUiLCJpYXQiOjE2MDcxODM3MjN9.BjtQYRlkAcjscJVLE08Zq57DgNBGP-t-Vekvw25Ffz0" 
         }
+
+        const url = "https://coding-challenge-api.aerolab.co/products"
+
         try{
-            let response = await fetch("https://coding-challenge-api.aerolab.co/products", {headers} ) //el segundo parametro del fetch sirve para pedirle que tenga en cuenta otras cosas
+            let response = await fetch(url, {headers} ) //el segundo parametro del fetch sirve para pedirle que tenga en cuenta otras cosas
             if (response.status !== 200) {
                 throw new Error("Ups, something went wrong!")
             }
@@ -29,8 +32,11 @@ class ProductServices {
             mode: "cors",
             headers
         }
+
+        const url = "https://coding-challenge-api.aerolab.co/redeem"
+
         try{
-            let response = await fetch("https://coding-challenge-api.aerolab.co/redeem", parameters ) //el segundo parametro del fetch sirve para pedirle que tenga en cuenta otras cosas
+            let response = await fetch(url, parameters ) //el segundo parametro del fetch sirve para pedirle que tenga en cuenta otras cosas
             if (response.status !== 200) {
                 throw new Error("Ups, something went wrong!")
             }
