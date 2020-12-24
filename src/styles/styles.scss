@@ -364,6 +364,8 @@ padding: .5rem;
     display: flex;
     justify-content: center;
     width: 100%;
+    position: relative;
+    z-index: 10000;
     .add-coins-notification {
         position: fixed;
         align-self: center;
