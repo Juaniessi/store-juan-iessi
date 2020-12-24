@@ -19,9 +19,9 @@ function HoverCard (props){
     const redeemProduct = async (buttonEvent) => {
         buttonEvent.target.disabled = true; //evento que desabilita el botón
         redeemS = await ProductServices.postRedeem(id);
-        const updatedUser = await UserServices.getUser();
-        setUser(updatedUser);
         setRedeemState(redeemS);
+        const updatedUser = await UserServices.getUser();
+        setUser(updatedUser);  
         buttonEvent.target.disabled = false; 
     }
 
