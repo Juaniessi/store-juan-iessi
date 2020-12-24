@@ -9,9 +9,9 @@ function AddCoins (){
 
     const addMoreCoins = async (amountCoins) => {
        await UserServices.postCoins(amountCoins);
-       const updatedUser = await UserServices.getUser(); //me traigo el usuario, lo asigno a uan variable y luego lo seteo
-       setUser(updatedUser); 
        alert(`Added ${amountCoins} coins.`);
+       const updatedUser = await UserServices.getUser(); //me traigo el usuario, lo asigno a una variable y luego lo seteo
+       setUser(updatedUser);       
     }
 
     return (
