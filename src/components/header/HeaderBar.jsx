@@ -45,10 +45,10 @@ function HeaderBar (){
     },[showHistory]);
 
     return (
-        <div>
+        <header>
             <div className="header-bar">
                <img src={logo} alt="Barrilete de aerolab"/>
-               <div className="user">
+               <nav className="user">
                 <h3>{name}</h3>
                 <button className="header-button" onClick={handleHistory} title={`see ${name} history`}>{showHistory === false ? <FontAwesomeIcon icon={faHistory} /> : <FontAwesomeIcon icon={faHome} /> }</button>                
                     <div className="user-coin" title="Add more coins" onClick={handleFlag}>
@@ -57,10 +57,10 @@ function HeaderBar (){
                         </span>
                         <img className="icon-coin" src={coinIcon} alt="Monedas"/>
                     </div>
-               </div>
+               </nav>
             </div>
         {flag === false ? "" : <AddCoins/>}
-        </div>
+        </header>
     )
 };
 
