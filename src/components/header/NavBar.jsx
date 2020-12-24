@@ -26,7 +26,6 @@ function NavBar (){
         if(products !== redeemHistoryFromFetch){
             setAuxProducts(products);
         }
-
         setProducts((showHistory ? redeemHistoryFromFetch : auxProducts));
         setOnHistory(showHistory); //showHistory y onHistory tienen el mismo valor, igualandola me ahorro traer la variable
     }
