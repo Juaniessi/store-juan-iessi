@@ -15,10 +15,10 @@ import {
 
 function NavBar (){
 
-    const {user:{name, points}, products, setProducts} = useContext(Context); /* redeemHistory es una propiedad el usuario */
+    const {user:{name, points}, products, setProducts, setOnHistory} = useContext(Context); /* redeemHistory es una propiedad el usuario */
 
     const [flag, setFlag] = useState(false); /* uso esto para mostar o no el modal de compra de monedas */
-    const [showHistory, setHistoryFlag] = useState(null);
+    const [showHistory, setHistoryFlag] = useState(null); // para mostar el historial
     const [auxProducts, setAuxProducts] = useState([]);
 
     const redeemHistoryFunction = async () =>{
@@ -28,6 +28,7 @@ function NavBar (){
         }
 
         setProducts((showHistory ? redeemHistoryFromFetch : auxProducts));
+        setOnHistory(showHistory); //showHistory y onHistory tienen el mismo valor, igualandola me ahorro traer la variable
     }
 
     const handleFlag = () => { /* uso esto para mostar o no el modal de compra de monedas */

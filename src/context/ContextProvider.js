@@ -13,6 +13,8 @@ export default function AppProvider({ children }) {
 
     const [user, setUser]= useState({name:"", points:"", redeemHistory:[]}); //redeemHistory se setea como array vacio para poder hacer toString en headeImg
 
+    const [onHistory, setOnHistory] = useState(false);
+
     const getUserData = async () => { //doble async porque si no te llegan promesas por todos lados
         const userData = await UserServices.getUser();
         setUser(userData);
@@ -20,10 +22,10 @@ export default function AppProvider({ children }) {
 
     useEffect(() => getUserData(),[]); //usamos el useEffect para hacer que la funcion se ejecute 1 sola vez, a su vez, a get user data lo llamamos como arrow, para que REACT no se queje.
 
-    const onHistory = products.toString() === user.redeemHistory.toString(); //uso este booleano para saber en que galeria estoy parado
+    
 
   return (
-    <Context.Provider value={{ user, products, setUser, setProducts, redeemState, setRedeemState, onHistory}}>
+    <Context.Provider value={{ user, products, setUser, setProducts, redeemState, setRedeemState, onHistory, setOnHistory}}>
       {children}
     </Context.Provider>
   );
