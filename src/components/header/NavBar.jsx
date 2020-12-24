@@ -13,7 +13,7 @@ import {
     faHistory,
 } from '@fortawesome/free-solid-svg-icons'
 
-function HeaderBar (){
+function NavBar (){
 
     const {user:{name, points}, products, setProducts} = useContext(Context); /* redeemHistory es una propiedad el usuario */
 
@@ -45,10 +45,10 @@ function HeaderBar (){
     },[showHistory]);
 
     return (
-        <header>
+        <nav>
             <div className="header-bar">
                <img src={logo} alt="Barrilete de aerolab"/>
-               <nav className="user">
+               <div className="user">
                 <h3>{name}</h3>
                 <button className="header-button" onClick={handleHistory} title={`see ${name} history`}>{showHistory === false ? <FontAwesomeIcon icon={faHistory} /> : <FontAwesomeIcon icon={faHome} /> }</button>                
                     <div className="user-coin" title="Add more coins" onClick={handleFlag}>
@@ -57,11 +57,11 @@ function HeaderBar (){
                         </span>
                         <img className="icon-coin" src={coinIcon} alt="Monedas"/>
                     </div>
-               </nav>
+               </div>
             </div>
         {flag === false ? "" : <AddCoins/>}
-        </header>
+        </nav>
     )
 };
 
-export default HeaderBar;
+export default NavBar;

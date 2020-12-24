@@ -1,14 +1,14 @@
 import React from "react";
-import HeaderBar from "./HeaderBar";
+import NavBar from "./NavBar";
 import HeaderImg from "./HeaderImg";
 
 function Header (){
 
     return (
-        <div>
-            <HeaderBar/>
+        <header>
+            <NavBar/>
             <HeaderImg/>
-        </div>
+        </header>
     )
 };
 
